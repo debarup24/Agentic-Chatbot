@@ -11,7 +11,7 @@ export async function updateVectorDB(
     progressCallback: (filename: string, totalChunks: number, chunksUpserted: number, isComplete: boolean) => void
 ) {
       const modelname = 'mixedbread-ai/mxbai-embed-large-v1'
-      const extractor = await pipeline('feature-extraction', modelname, { quantized: false, 
+      const extractor = await pipeline('feature-extraction', modelname, { quantized: false, // error given! 
 
       })
       console.log(extractor);
