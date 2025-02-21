@@ -25,6 +25,7 @@ async function handleUpload(indexName: string, nameSpace: string, res: NextApiRe
         apiKey: process.env.PINECONE_API_KEY!
      })
      await updateVectorDB(client, indexName, nameSpace, docs, (filename, totalChunks, chunkUpserted, isComplete) => {
+        
         if(!isComplete) {
             res.write(
                 JSON.stringify({

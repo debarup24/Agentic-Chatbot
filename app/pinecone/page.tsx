@@ -29,7 +29,7 @@ const VectorDBpage = (props: Props) => {
    }
 
   return (
-     // use 
+     
     <main className='flex flex-col items-center bg-slate-100 p-24'>
         <Card>
             <CardHeader>
